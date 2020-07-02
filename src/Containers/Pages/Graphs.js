@@ -295,7 +295,7 @@ export const GraphsAccid = () => {
      {
        name: '이상',
        day: '목',
-       value: 8,
+       value: 1,
      },
      {
        name: '이상',
@@ -305,50 +305,50 @@ export const GraphsAccid = () => {
      {
        name: '이상',
        day: '토',
-       value: {},
+       value: '(미래)',
      },
      {
        name: '이상',
        day: '일',
-       value: {},
+       value: '(미래)',
      },
      {
        name: '사고',
        day: '월',
-       value: 3,
+       value: 0,
      },
      {
        name: '사고',
        day: '화',
-       value: 4,
+       value: 0,
      },
      {
        name: '사고',
        day: '수',
-       value: 2,
+       value: 0,
      },
      {
        name: '사고',
        day: '목',
-       value: 3,
+       value: 0,
      },
      {
        name: '사고',
        day: '금',
-       value: 9,
+       value: 0,
      },
      {
        name: '사고',
        day: '토',
-       value: {},
+       value: '(미래)',
      },
      {
        name: '사고',
        day: '일',
-       value: {},
+       value: '(미래)',
      },
-
    ];
+
    const config = {
      title: {
        visible: true,
@@ -358,13 +358,14 @@ export const GraphsAccid = () => {
      data,
      xField: 'day',
      yField: 'value',
-     yAxis: { min: 0 },
+     xAxis: { min: 0 , max:6},
+     yAxis: { min: 0 , max:10},
      label: { visible: true },
      groupField: 'name',
-     color: ['yellow', '#f88c24'],
+     color: ['#fff58c', '#FFCB8C'],
    };
     return (
-          <div  style={{ width:'100%' , height:'110%' }}  >
+          <div  style={{ width:'100%' , height:'130%' }}  >
             <GroupedColumn  {...config}  style={{ width:'100%' , height:'100%' }} />
           </div>
           );
