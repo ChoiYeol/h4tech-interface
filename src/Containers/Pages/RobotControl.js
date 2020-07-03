@@ -111,7 +111,7 @@ const RobotControl = () => {
                                         style={{
                                             width: '7%',
                                             position:'absolute',
-                                            top: 20,
+                                            top: 40,
                                             left: 45
                                         }}>
                                         <Button type="primary">▲</Button>
@@ -123,7 +123,7 @@ const RobotControl = () => {
                                             height: '10%',
                                             float:'left',
                                             position: 'absolute',
-                                            top:60,
+                                            top:80,
                                             left:38
                                         }}>
                                         <Joystick size={50} baseColor="#1890ff" stickColor="black"></Joystick>
@@ -133,7 +133,7 @@ const RobotControl = () => {
                                         style={{
                                             width: '7%',
                                             position:'absolute',
-                                            bottom:50,
+                                            bottom:30,
                                             left:45
                                         }}>
                                         <Button type="primary">▼</Button>
@@ -142,7 +142,7 @@ const RobotControl = () => {
                                         style={{
                                             width: '100%',
                                             position:'absolute',
-                                            bottom:0,
+                                            top:0,
                                             left:35
                                         }}>
                                         로봇이동
@@ -163,7 +163,7 @@ const RobotControl = () => {
                                         style={{
                                             width: '7%',
                                             position:'absolute',
-                                            top: 20,
+                                            top: 40,
                                             left: 45
                                         }}>
                                         <Button type="primary">▲</Button>
@@ -174,7 +174,7 @@ const RobotControl = () => {
                                             width: '7%',
                                             float:'left',
                                             position: 'absolute',
-                                            top:65,
+                                            top:85,
                                             left:0
                                         }}>
                                         <Button type="primary">◀</Button>
@@ -185,7 +185,7 @@ const RobotControl = () => {
                                             height: '10%',
                                             float:'left',
                                             position: 'absolute',
-                                            top:60,
+                                            top:80,
                                             left:38
                                         }}>
                                         <Joystick size={50} baseColor="#1890ff" stickColor="black"></Joystick>
@@ -195,7 +195,7 @@ const RobotControl = () => {
                                             width: '7%',
                                             float:'left',
                                             position:'absolute',
-                                            top:65,
+                                            top:85,
                                             left:95
                                         }}>
                                         <Button type="primary">▶</Button>
@@ -204,7 +204,7 @@ const RobotControl = () => {
                                         style={{
                                             width: '7%',
                                             position:'absolute',
-                                            bottom:50,
+                                            bottom:30,
                                             left:45
                                         }}>
                                         <Button type="primary">▼</Button>
@@ -222,7 +222,7 @@ const RobotControl = () => {
                                         style={{
                                             width: '100%',
                                             position:'absolute',
-                                            bottom:0,
+                                            top:0,
                                             left:35
                                         }}>
                                         카메라 조절
