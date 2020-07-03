@@ -90,7 +90,8 @@ const RobotControl = () => {
                                     background: '#e6f7ff',
                                     width: '100%',
                                     height: '100%',
-                                    padding:0
+                                    padding:0,
+                                    justifyContent:'center'
                                 }}
                                 style={{padding:0}}>
                                 <div>
@@ -99,11 +100,11 @@ const RobotControl = () => {
                                 <div style={{marginTop:'15px'}}>
                                 <div
                                     style={{
-                                        width:'120px',
+                                        width:'20%',
                                         height:'200px',
                                         float: 'left',
                                         position:'relative',
-                                        margin:'0 0 20px 20px',
+                                        margin:'0 0 20px 0px',
                                         border:'3px solid #c8c8c8',
                                     }}>
                                     <div
@@ -150,14 +151,14 @@ const RobotControl = () => {
 
                                 <div
                                     style={{
-                                        width:'100px',
+                                        width:'40%',
                                         height:'200px',
                                         float: 'left',
                                         position:'relative',
-                                        margin:'0 0 20px 40px',
-
+                                        margin:'0 0 20px 10px',
+                                        border:'3px solid #c8c8c8'
                                     }}>
-                                    <div style={{position:'absolute', marginLeft:'-20px', width:'250px', height:'200px',border:'3px solid #c8c8c8'}}/>
+
                                     <div
                                         style={{
                                             width: '7%',
@@ -195,7 +196,7 @@ const RobotControl = () => {
                                             float:'left',
                                             position:'absolute',
                                             top:65,
-                                            right:0
+                                            left:95
                                         }}>
                                         <Button type="primary">▶</Button>
                                     </div></div>
@@ -208,6 +209,15 @@ const RobotControl = () => {
                                         }}>
                                         <Button type="primary">▼</Button>
                                     </div>
+                                    <img
+                                        style={{
+                                            border: '1px solid black',
+                                            width:'15%',
+                                            height: '180px',
+                                            marginLeft:'160px',
+                                            marginTop:'10px'
+                                        }}
+                                        src='/scalebar.png'/>
                                     <div
                                         style={{
                                             width: '100%',
@@ -222,58 +232,46 @@ const RobotControl = () => {
                                 <div
                                     className="card3-control-button"
                                     style={{
-                                        width:'100px',
+                                        width:'20%',
                                         height:'200px',
                                         float: 'left',
                                         position:'relative',
-                                        margin:'10px 0 20px 20px'
+                                        margin:'0 0 20px 10px',
+                                        border:'3px solid #c8c8c8'
                                     }}>
-                                    <img
-                                        style={{
-                                            border: '1px solid black',
-                                            height: '180px',
-                                            marginLeft:'50px'
-                                        }}
-                                        src='/scalebar.png'/>
-                                </div>
-                                <div
-                                    className="card3-control-button"
-                                    style={{
-                                        width:'100px',
-                                        height:'200px',
-                                        float: 'left',
-                                        position:'relative',
-                                        margin:'0 0 20px 50px'
-                                    }}>
-                                      <div style={{position:'absolute', marginLeft:'-20px', width:'150px', height:'200px',border:'3px solid #c8c8c8'}}/>
-                                    <div style={{  marginTop:'30px'}}>
-                                        <Button
-                                            type="primary"
-                                            style={{ padding:'5px',
-                                                border: '1px solid black'
-                                            }}>자동순찰정지</Button>
-                                    </div>
-                                    <div
-                                        style={{
-                                            marginTop: '15px'
-                                        }}>
-                                        <Button
-                                            type="primary"
+
+                                        <div style={{  marginTop:'30px'}}>
+                                            <Button
+                                                type="primary"
+                                                style={{ padding:'5px',
+                                                    border: '1px solid black',
+                                                    width:'90%'
+                                                }}>자동순찰정지</Button>
+                                        </div>
+                                        <div
                                             style={{
-                                                padding:'5px',
-                                                border: '1px solid black'
-                                            }}>자동순찰전환</Button>
-                                    </div>
-                                    <div
-                                        style={{
-                                            marginTop: '15px'
-                                        }}>
-                                        <Button
-                                            type="primary"
+                                                marginTop: '15px'
+                                            }}>
+                                            <Button
+                                                type="primary"
+                                                style={{
+                                                    padding:'5px',
+                                                    border: '1px solid black',
+                                                      width:'90%'
+                                                }}>자동순찰전환</Button>
+                                        </div>
+                                        <div
                                             style={{
-                                                border: '1px solid black'
-                                            }}>설정 리셋</Button>
-                                    </div>
+                                                marginTop: '15px'
+                                            }}>
+                                            <Button
+                                                type="primary"
+                                                style={{
+                                                    border: '1px solid black',
+                                                      width:'90%'
+                                                }}>설정 리셋</Button>
+
+                                      </div>
                                 </div></div>
                             </Card>
                             <div className="robot-img"  style={{border:'0px'}} >
@@ -285,7 +283,7 @@ const RobotControl = () => {
                                     alt=""
                                     style={{
                                         marginLeft:60,
-                                        width: '500px',
+                                        width: '160%',
                                         height: '100%'
                                     }}/>
                             </div>
