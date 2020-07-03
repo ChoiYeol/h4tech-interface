@@ -19,7 +19,7 @@ export class TempChart extends Component {
         var data_bar = [];
         for (var i = 1; i <= nb_elem; i++) {
             data_bar.push({
-                name: i*20,
+                name: i,
                 temp: (30 + (Math.round(Math.random() * 20) / 10))
             });
         }
@@ -65,27 +65,23 @@ export class TempChart extends Component {
                         fontSize: '16px',
                         margin: '0 0 0px 32px',
                         float:'left'
-                    }}>FBG Temperature</div>
+                    }}>Temp Chart</div>
                     <div style={{
                         fontSize: '16px',
-                        float:'right',
-                        border: '1px solid #f0faff',
-                        background: '#e6f7ff',
-                        color: 'black',
-                        padding:'5px'
-                    }}>1분 단위</div>
+                        margin: '0 100px 0px 0px',
+                        float:'right'
+                    }}>Update every minutes</div>
                 <ResponsiveContainer minHeight={300}>
                     <BarChart data={this.state.data}>
-                        <XAxis dataKey="name" label={{ value: "(m)", position: 'insideBottomRight',offset: -3 }}/>
-                        <YAxis domain={[0, 50]} label={{ value: "(°C)", position: 'insideTop',offset: -20 }}/>
+                        <XAxis dataKey="name"/>
+                        <YAxis domain={[0, 50]}/>
                         <CartesianGrid stroke="#e0e0e0" strokeDasharray="3 3"/>
                         <Tooltip/>
                         <Legend
                             verticalAlign="top"
                             align="right"
                             wrapperStyle={{
-                                top: '6px',
-                                right: '90px'
+                                top: 0
                             }}/>
                         <Bar dataKey="temp" fill="#c1e0fc"/>
                         <ReferenceLine y={avg} stroke="red"/>
@@ -102,7 +98,7 @@ export class SoundChart extends Component {
 
         for (var i = 1; i <= nb_elem; i++) {
             data_bar.push({
-                name: i*20,
+                name: i,
                 dB: (50 + (Math.round(Math.random() * 10)))
             });
         }
@@ -148,27 +144,23 @@ export class SoundChart extends Component {
                         fontSize: '16px',
                         margin: '0 0 0px 32px',
                         float: 'left'
-                    }}>FBG Sound</div>
+                    }}>Sound Chart</div>
                     <div style={{
                         fontSize: '16px',
-                        float:'right',
-                        border: '1px solid #f0faff',
-                        background: '#e6f7ff',
-                        color: 'black',
-                        padding:'5px'
-                    }}>1분 단위</div>
+                        margin: '0 100px 0px 0px',
+                        float:'right'
+                    }}>Update every minutes</div>
                 <ResponsiveContainer minHeight={300}>
                     <BarChart data={this.state.data}>
-                        <XAxis dataKey="name" label={{ value: "(m)", position: 'insideBottomRight',offset: -3 }}/>
-                        <YAxis domain={[0, 80]} label={{ value: "(dB)", position: 'insideTop', offset: -20 }}/>
+                        <XAxis dataKey="name"/>
+                        <YAxis domain={[0, 80]}/>
                         <CartesianGrid stroke="#e0e0e0" strokeDasharray="3 3"/>
                         <Tooltip/>
                         <Legend
                             verticalAlign="top"
                             align="right"
                             wrapperStyle={{
-                                top: '6px',
-                                right: '90px'
+                                top: 0
                             }}/>
                         <Bar dataKey="dB" fill="#d6fbb5"/>
                         <ReferenceLine y={avg} stroke="red"/>
@@ -179,7 +171,7 @@ export class SoundChart extends Component {
     }
 }
 
-export class SagnacChart extends Component {
+export class FOS extends Component {
     render() {
         return (
             <Fragment>
@@ -189,21 +181,17 @@ export class SagnacChart extends Component {
                         fontSize: '16px',
                         margin: '0 0 0px 32px',
                         float:'left'
-                    }}>Sagnac</div>
+                    }}>FOS</div>
                     <div style={{
                         fontSize: '16px',
-                        float:'right',
-                        border: '1px solid #f0faff',
-                        background: '#e6f7ff',
-                        color: 'black',
-                        padding:'5px'
-                    }}>1분 단위</div>
+                        float:'right'
+                    }}>Update every minutes</div>
                     <div style={{marginLeft:'32px'}}>
                 <audio id='audio-element' src='/accident.mp3' autoPlay="autoPlay" loop="loop"></audio>
                 <AudioSpectrum
                     id='audio-canvas'
                     height='300'
-                    width='750'
+                    width='700'
                     audioId='audio-element'
                     capColor={'red'}
                     capHeight={2}
@@ -215,10 +203,10 @@ export class SagnacChart extends Component {
                             color: '#f00'
                         }, {
                             stop: 0.5,
-                            color: '#ff8cac'
+                            color: '#0CD7FD'
                         }, {
                             stop: 1,
-                            color: '#ff8cac'
+                            color: 'red'
                         }
                     ]}
                     gap={4}/></div>
